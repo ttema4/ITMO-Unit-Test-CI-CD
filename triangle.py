@@ -10,6 +10,9 @@ def area(a, h):
     >>> area(4, 5)
     10.0
     """
+    if any(param < 0 for param in (a, h)):
+        raise ValueError("Длины должны быть неотрицательными")
+
     return a * h / 2
 
 
@@ -24,4 +27,7 @@ def perimeter(a, b, c):
     >>> perimeter(3, 4, 5)
     12
     """
+    if any(param < 0 for param in (a, b, c)):
+        raise ValueError("Длины должны быть неотрицательными")
+
     return a + b + c

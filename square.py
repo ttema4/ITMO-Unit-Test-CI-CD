@@ -9,6 +9,9 @@ def area(a):
     >>> area(4)
     16
     """
+    if a < 0:
+        raise ValueError("Длина стороны должна быть неотрицательной")
+
     return a * a
 
 
@@ -23,4 +26,7 @@ def perimeter(a):
     >>> perimeter(4)
     16
     """
+    if a < 0:
+        raise ValueError("Длина стороны должна быть неотрицательной")
+
     return 4 * a
